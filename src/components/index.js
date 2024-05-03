@@ -6,7 +6,7 @@ import WeatherContext from '../context/WeatherContext';
 async function fetchData(city) {
 
     try {
-        const weatherResponse = await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/2024-05-03/2024-05-10?unitGroup=metric&include=days%2Ccurrent&key=B98543BQP4HXV7C4LS5YB2JT3&contentType=json`)
+        const weatherResponse = await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/2024-05-03/2024-05-10?unitGroup=metric&include=days%2Ccurrent&key=${YOUR_API_KEY}&contentType=json`)
 
         const data = await weatherResponse.data;
         console.log(data);
